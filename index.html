@@ -2,39 +2,37 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="stylesheet" href='style.css' />
-  <script src="src/index.js"></script>
-  <title>KidsMDb</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KidsMDb - Movies Database</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="src/index.js"></script>
 </head>
 <body>
-  <h2>Movies Database</h2>
-  
-  <ul>
-    <li>
-      <h3>The Brave Little Toaster</h3>
-      <div>ID: 1</div>
-    </li>
-    <li>
-      <h3>The Princess Bride</h3>
-      <div>ID: 2</div>
-    </li>
-    <li>
-      <h3>Spirited Away</h3>
-      <div>ID: 3</div>
-    </li>
-  </ul>
+  <header>
+    <h1>KidsMDb</h1>
+    <h2>Movies Database</h2>
+  </header>
 
-  <section>
-    <form>
-      <label for="searchByID">Search By ID</label>
-      <input id="searchByID" type="text" placeholder="Enter ID here"/>
-      <input type="submit" />
-    </form>
-  </section>
-  <section id="movieDetails">
-    <h4>Title</h4>
-    <p>Summary</p>
-  </section>
+  <main>
+    <section>
+      <h3>All Movies</h3>
+      <ul id="moviesList"></ul>
+    </section>
+
+    <section>
+      <h3>Search By ID</h3>
+      <form id="searchForm">
+        <label for="searchByID">Enter Movie ID:</label>
+        <input id="searchByID" type="number" placeholder="Enter ID here" required>
+        <button type="submit">Search</button>
+      </form>
+    </section>
+
+    <section id="movieDetails">
+      <h3>Movie Details</h3>
+      <h4 id="movieTitle">Title</h4>
+      <p id="movieSummary">Summary</p>
+    </section>
+  </main>
 </body>
 </html>
